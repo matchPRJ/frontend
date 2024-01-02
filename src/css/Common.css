@@ -1,0 +1,19 @@
+.logo {
+    margin-left: 120px;
+    font-size: 30px;
+}
+
+.login {
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: 920px;
+}
+
+.bar {
+    flex-direction: row;
+}
+
+.barSpan {
+    font-size: 40px;
+    margin-left: 6.5%;
+}
