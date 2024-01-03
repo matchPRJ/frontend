@@ -6,6 +6,7 @@
 .barArea{
     margin-right: 80px;
     margin-left: 80px;
+    height: 75px;
     background-color: gainsboro;
     border-width: 1px;
     border-style: solid;

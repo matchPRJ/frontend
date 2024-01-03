@@ -1,0 +1,239 @@
+.carousel .slide {
+    background: white;
+}
+
+/* 이미지가 들어가는 공간 */
+.carousel .slide img {  
+    object-fit: contain;
+    width: 890px;
+    height: 550px;
+    margin: 0;
+    margin-left: 400px;
+    cursor: pointer;
+}
+
+/* 아래 . . . . .  */
+.carousel .control-dots .dot {    
+    background-color: gray;
+}
+
+/* 선택된 dot 색 변환 */
+.carousel .control-dots .dot.selected { 
+    background-color: black;
+}
+
+/* 1 of 5 <p> 태그 안보이게 하기 */
+.carousel .carousel-status {  
+    display : none;
+}
+
+/* 왼쪽 오른쪽 화살표 버튼 비활성화 */
+.carousel .control-arrow.control-prev {    
+    display : none;
+}
+.carousel .control-arrow.control-next {
+    display : none;
+}
+
+.CarouselDiv {
+    width: 1300px;
+    height: 650px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.div1 {
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #01D9B4;
+}
+
+.div2 {
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div3 {
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #C8E8F5;
+}
+
+.Text1 {
+    user-select: none;
+    position: absolute;
+    top: 5%;
+    width: 300px;
+    transform: translateY(-50%);
+    left: 65px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    color: #004D40;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Text2 {
+    user-select: none;
+    position: absolute;
+    top: 5%;
+    width: 300px;
+    transform: translateY(-50%);
+    left: 72px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    color: steelblue;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Text3 {
+    user-select: none;
+    position: absolute;
+    top: 5%;
+    width: 300px;
+    transform: translateY(-50%);
+    left: 65px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Text4 {
+    user-select: none;
+    position: absolute;
+    top: 5%;
+    width: 300px;
+    transform: translateY(-50%);
+    left: 60px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Text5 {
+    position: absolute;
+    top: 5%;
+    width: 400px;
+    transform: translateY(-50%);
+    left: 15px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Explan1 {
+    position: absolute;
+    top: 50%;
+    width: 340px;
+    transform: translateY(-50%);
+    left: 50px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    color: #004D40;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Explan2 {
+    color: #4169E1;
+    position: absolute;
+    top: 50%;
+    width: 340px;
+    transform: translateY(-50%);
+    left: 50px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Explan3 {
+    color: black;
+    position: absolute;
+    top: 50%;
+    width: 340px;
+    transform: translateY(-50%);
+    left: 50px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Explan4 {
+    color: black;
+    position: absolute;
+    top: 50%;
+    width: 340px;
+    transform: translateY(-50%);
+    left: 50px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Explan5 {
+    color: black;
+    position: absolute;
+    top: 50%;
+    width: 340px;
+    transform: translateY(-50%);
+    left: 50px;
+    z-index: 10;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.Button {
+    position: absolute;
+    top: 90%;
+    width: 200px;
+    padding: 5px;
+    transform: translateY(-50%);
+    left: 120px;
+    z-index: 10;
+    border-radius: 20px;
+    color: white;
+    background: green;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
