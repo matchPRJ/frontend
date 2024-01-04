@@ -1,16 +1,15 @@
 import SiteLogo from "../components/common/SiteLogo";
 import NavBar from "../components/common/NavBar";
-import MainView from "../components/Main/MainView";
+import CarMenu from "../components/CarSearch/CarMenu";
 
-const MainPage = () => {
+const CarSearch = () => {
     return(
         <div>
             <SiteLogo/>
             <NavBar/>
-            <MainView/>
+            <CarMenu/>
         </div>
-        
     );
 }
 
-export default MainPage;
+export default CarSearch;

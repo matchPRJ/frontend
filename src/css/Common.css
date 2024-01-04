@@ -1,3 +1,13 @@
+.main {
+    flex-direction: row;
+    display: flex;
+}
+
+.touch {
+    text-decoration: none;
+    color: black;
+}
+
 .logo {
     margin-left: 120px;
     font-size: 30px;
@@ -10,11 +20,19 @@
 }
 
 .bar {
-    margin-top: 10px;
-    flex-direction: row;
+    margin-right: 80px;
+    margin-left: 80px;
+    height: 75px;
+    background-color: gainsboro;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .barSpan {
     font-size: 40px;
-    margin-left: 6.5%;
+    margin: 0 30px;
 }
