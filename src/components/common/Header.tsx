@@ -1,7 +1,6 @@
 
 import { Button, Toolbar, Typography } from '@mui/material';
 import React from 'react';
-import LoginBar from './LoginBar';
 
 const Header = () => {
     return(
