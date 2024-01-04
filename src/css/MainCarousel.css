@@ -83,7 +83,7 @@
     top: 5%;
     width: 300px;
     transform: translateY(-50%);
-    left: 65px;
+    left: 70px;
     z-index: 10;
     background-color: transparent;
     border: none;
@@ -98,7 +98,7 @@
     top: 5%;
     width: 300px;
     transform: translateY(-50%);
-    left: 72px;
+    left: 70px;
     z-index: 10;
     background-color: transparent;
     border: none;
@@ -113,7 +113,7 @@
     top: 5%;
     width: 300px;
     transform: translateY(-50%);
-    left: 65px;
+    left: 70px;
     z-index: 10;
     background-color: transparent;
     border: none;
@@ -128,7 +128,7 @@
     top: 5%;
     width: 300px;
     transform: translateY(-50%);
-    left: 60px;
+    left: 70px;
     z-index: 10;
     background-color: transparent;
     border: none;
@@ -140,9 +140,9 @@
 .Text5 {
     position: absolute;
     top: 5%;
-    width: 400px;
+    width: 300px;
     transform: translateY(-50%);
-    left: 15px;
+    left: 70px;
     z-index: 10;
     background-color: transparent;
     border: none;
