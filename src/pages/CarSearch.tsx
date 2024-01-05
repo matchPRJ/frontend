@@ -7,7 +7,7 @@ const CarSearch = () => {
         <div>
             <SiteLogo/>
             <NavBar/>
-            <CarMenu/>
+            <CarMenu/>      
         </div>
     );
 }
