@@ -25,7 +25,9 @@ const MainView = () => {
                         <br/><br/>
                         3️⃣ 맞춤 추천<br/>
                         자신이 원하는 옵션을 선택하면, 해당 조건에 맞는 중고차 목록이 제공되어 더욱 신속하게 비교 차량을 찾을 수 있습니다.</span>
-                    <button className='Button'>자세히 살펴보기</button>
+                    <a href="/search" className='touch'>
+                        <button className='Button'>자세히 살펴보기</button>
+                    </a>
                 </div>
                 <div className='div3'>
                     <img src={Accident} alt="Accident"/>
@@ -38,7 +40,9 @@ const MainView = () => {
                         2️⃣ 정확한 비율 측정<br/>
                         입력된 사고 환경 조건을 기반으로 서비스는 해당 조건에서의 차량 사고 발생 가능성을 정확하게 측정합니다. 
                         통계적인 분석과 머신러닝 알고리즘을 활용하여 사고의 원인 및 잘못된 비율을 예측하고 제시합니다.</span>
-                    <button className='Button'>자세히 살펴보기</button>
+                    <a href="/" className='touch'>
+                        <button className='Button'>자세히 살펴보기</button>
+                    </a>
                 </div>
                 <div className='div2'>
                     <img src={Recommend} alt="Recommend"/>
@@ -56,7 +60,9 @@ const MainView = () => {
                         사용자에게 다양한 보험사의 추천 결과를 제시합니다. 
                         최종적으로 사용자가 선택한 옵션에 따라 가장 많이 언급된 보험사를 추천하여 보험 가입 결정을 돕습니다.
                     </span>
-                    <button className='Button'>자세히 살펴보기</button>
+                    <a href="/" className='touch'>
+                        <button className='Button'>자세히 살펴보기</button>
+                    </a>
                 </div>
                 <div className='div2'>
                     <img src={Info} alt="Info"/>
@@ -74,7 +80,9 @@ const MainView = () => {
                         주유소의 경우는 가격 정보를, 병원이나 카센터의 경우는 서비스 평점을 확인할 수 있습니다. 
                         이를 통해 사용자는 비교적 저렴한 가격이나 좋은 서비스를 제공하는 시설을 선택할 수 있습니다. 
                     </span>
-                    <button className='Button'>자세히 살펴보기</button>
+                    <a href="/" className='touch'>
+                        <button className='Button'>자세히 살펴보기</button>
+                    </a>
                 </div>
                 <div className='div2'>
                     <img src={Community} alt="Community"/>
@@ -90,7 +98,9 @@ const MainView = () => {
                         도움을 받을 수 있습니다. 궁금한 사항이나 문제가 있을 때 다양한 의견과 해결책을 얻어 자신의 차량 관리를 보다 
                         효과적으로 할 수 있습니다.
                     </span>
-                    <button className='Button'>자세히 살펴보기</button>
+                    <a href="/community" className='touch'>
+                        <button className='Button'>자세히 살펴보기</button>
+                    </a>
                 </div>
             </Carousel>
         </div>

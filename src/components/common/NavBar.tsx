@@ -15,7 +15,7 @@ const NavBar = () => {
             <a href='/' className='touch'>
                 <span className="barSpan">시설 위치</span>
             </a>
-            <a href='/' className='touch'>
+            <a href='/community' className='touch'>
                 <span className="barSpan">커뮤니티</span>
             </a>
         </div>

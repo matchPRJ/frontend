@@ -13,6 +13,7 @@ interface Car {
     price: string;
     year: number;
     km: string;
+    img: string;
 }
 
 const CarMenu = () => {
@@ -27,15 +28,24 @@ const CarMenu = () => {
         kType: '',   // 주행거리
       });
 
-    const send = async () => {
+      const send = async () => {
         try {
             const serverUrl = 'http://192.168.0.4:6400/car/list';
-            const response = await axios.get(serverUrl, { params: searchData });
-            console.log('서버 응답:', response.data); // 응답 전체 출력
-
+    
+            // searchData에서 빈 값을 필터링합니다.
+            const filteredSearchData = Object.fromEntries(
+                Object.entries(searchData).filter(([_, value]) => value !== '')
+            );
+    
+            const response = await axios.get(serverUrl, {
+                params: Object.keys(filteredSearchData).length > 0 ? filteredSearchData : null,
+            });
+    
+            console.log('서버 응답:', response.data);
+    
             const CarList = response.data.dtoList;
             setCarList(CarList);
-          } catch (error) {
+        } catch (error) {
             console.error('GET 요청 중 에러 발생:', error);
         }
     };
@@ -65,7 +75,8 @@ const CarMenu = () => {
             <div className='product'>
                 <ul className='car-list'>
                     {carList.map((car, index) => (
-                        <li key={index}>
+                        <li key={index} className='carLi'>
+                        <img src={car.img} alt={car.name} className='carImg' />
                         <p>{car.name}</p>
                         <p>{car.price}</p>
                         <p>{car.year}년식, {car.km}</p>
