@@ -43,3 +43,20 @@ export const brandOptions: Option[] = [
   ...brand1.map(brand => ({ value: brand, label: brand })),
   ...brand2.map(brand => ({ value: brand, label: brand })),
 ];
+
+const year = ['최소', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998'
+, '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009'
+, '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'
+, '2021', '2022', '2023', '최대'];
+
+export const yearOptions: Option[] = [
+  ...year.map(year => ({ value: year, label: year})),
+];
+
+const km = ['최소', '10000km', '20000km', '30000km', '40000km', '50000km', '60000km', '70000km', '80000km', '90000km'
+, '100000km', '110000km', '120000km', '130000km', '140000km', '150000km', '160000km', '170000km', '180000km', '190000km'
+, '200000km','최대'];
+
+export const kmOptions: Option[] = [
+  ...km.map(km => ({ value: km, label: km})),
+];

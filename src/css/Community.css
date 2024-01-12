@@ -1,0 +1,145 @@
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: slategray;
+    width: 1000px;
+    height: 100px;
+    margin: 30px auto;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.selectBox {
+    font-size: 17px;
+    width: 80px;
+    margin-right: 10px;
+}
+
+.input {
+    margin-bottom: 9px;
+    height: 17px;
+    width: 200px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    margin-right: 10px;
+}
+
+.searchButton {
+    color: black;
+    height: 24px;
+    width: 60px;
+    font-size: 15px;
+    margin-bottom: 9px;
+    cursor: pointer;
+}
+
+.registerBox {
+    margin-left: 250px;
+}
+
+.register {
+    color: black;
+    height: 24px;
+    width: 80px;
+    font-size: 15px;
+    margin-bottom: 9px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+/* 게시글 css 파트 */
+.boardMain{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    margin: 30px auto;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.boardHeader {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.boardTable {
+    margin-bottom: 1.5px;
+    flex-direction: row;
+    
+}
+
+.boardRow {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black; 
+}
+
+.boardRow p {
+    margin: 0; 
+}
+
+.pagination {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+  
+.pagination button {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+  
+.pagination button:hover {
+    background-color: #0056b3;
+}
+  
+.pagination button.active {
+    background-color: #0056b3;
+}
+  
+.pagination button.disabled {
+    background-color: #ddd;
+    color: #777;
+    cursor: not-allowed;
+}
+  
+.pagination-arrow {
+    font-size: 18px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #007bff;
+}
+  
+.pagination-arrow.disabled {
+    color: #ddd;
+    cursor: not-allowed;
+}

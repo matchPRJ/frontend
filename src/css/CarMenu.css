@@ -1,19 +1,50 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .menu {
     margin-top: 5%;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
     margin-left: 8%;
     width: 250px;
-    border-radius: 5px;
-    border-color: black;
-    border-style: solid;
-    border-width: 2px;
+}
+
+
+.product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 5% auto 5%; 
+    width: 950px;
+    height: 520px;
+    justify-content: center;
+}
+  
+.car-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 각 행당 5개의 열로 배치합니다. */
+    align-items: center;
+}
+  
+.car-list li {
+    font-size: 12px;
+    width: 100px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+    text-align: center;
 }
 
 .block {
     padding-left: 10px;
     border-color: black;
     border-style: solid;
-    border-width: 2px; 
+    border-width: 2px;
+    border-left-width: 3px;
+    border-right-width: 3px; 
+    cursor: pointer;
 }
 
 .block li {
@@ -25,9 +56,10 @@
     background-color: aliceblue;
     color: #1e6b7b;
     font-size: 20px;
+    cursor: pointer;
 }
 
-.selectText {
+.menuText {
     font-size: 20px;
 }
 
@@ -36,3 +68,26 @@
     margin-bottom: 10px;
     font-size: 18px;
 }
+
+.selectBox {
+    font-size: 20px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.carImg {
+    width: 110px;
+    height: 110px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.carLi {
+    height: 250px;
+}
+
+.carLi p {
+    padding-left: 10px;
+}
+
