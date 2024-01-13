@@ -43,22 +43,27 @@
 }
 
 .register {
+    background-color: whitesmoke;
     color: black;
-    height: 24px;
-    width: 80px;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 15px;
-    margin-bottom: 9px;
     border-color: black;
     border-width: 2px;
     border-style: solid;
     cursor: pointer;
 }
 
+.touch {
+    text-decoration: none;
+}
+
 /* 게시글 css 파트 */
 .boardMain{
     position: relative;
     width: 1000px;
-    height: 600px;
+    height: 420px;
     margin: 30px auto;
     border-color: black;
     border-width: 2px;
@@ -117,13 +122,14 @@
     margin: 0 5px;
     border-radius: 4px;
 }
-  
+
 .pagination button:hover {
     background-color: #0056b3;
 }
   
 .pagination button.active {
     background-color: #0056b3;
+    color: #fff; /* 현재 페이지 글자색을 흰색으로 지정 */
 }
   
 .pagination button.disabled {
@@ -142,4 +148,184 @@
 .pagination-arrow.disabled {
     color: #ddd;
     cursor: not-allowed;
+}
+
+.aTitle {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+/* 게시글 작성(Register) css 파트 */
+.write {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 300px;
+    height: auto;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.inputText {
+    width: 800px;
+    height: 25px;
+    margin-top: 25px;
+}
+
+.textArea {
+    width: 800px;
+    height: 450px;
+    resize: none;
+    font-size: 18px;
+}
+
+.registerButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(153, 212, 235);
+    width: 100px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    font-size: 18px;
+}
+
+/* 게시글 상세 페이지(Read)css 파트 */
+
+.readPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 300px 0px;
+    height: auto;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.readButtons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 720px;
+}
+
+.font1 {
+    color: rgb(33, 33, 230);
+    margin-right: 10px;
+}
+
+.font2 {
+    color: red;
+    margin-left: 10px;
+}
+
+.replyFont1 {
+    color: rgb(33, 33, 230);
+    margin-right: 5px;
+}
+
+.replyFont2 {
+    color: red;
+    margin-left: 5px;
+}
+
+.readTitle {
+    padding-left: 10px;
+    width: 800px;
+    height: 25px;
+    margin-top: 15px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    pointer-events: none;
+}
+
+.readName {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.readArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    width: 800px;
+    height: 450px;
+    resize: none;
+    font-size: 18px;
+    margin-bottom: 25px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+
+/* 댓글 구역 css */
+.replyPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 300px 50px;
+    height: auto;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 10px;
+}
+
+.replyRegister {
+    display: flex;
+    justify-content: space-between;
+}
+
+.replyComment {
+    margin-top: 20px;
+    height: auto;
+    width: 700px;
+}
+
+.replies {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin-bottom: 5px;
+}
+
+.replyHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+}
+
+.replyContent {
+    height: auto;
+    margin-top: 5px;
+    padding: 0px 5px;
+    padding-bottom: 5px;
+}
+
+.replyText {
+    width: 400px;
+    height: 60px;
+    resize: none;
+    font-size: 18px;
+}
+
+.replySubmit {
+    width: 70px;
+    background-color: gainsboro;
+    cursor: pointer;
 }
