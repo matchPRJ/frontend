@@ -1,5 +1,6 @@
 import '../../css/Community.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface BoardProps {
     boardData: {
@@ -8,6 +9,7 @@ interface BoardProps {
             btitle: string;
             bnickname: string;
             regDate: string;
+            replyCount: number;
         }[];
         totalPage: number;
         page: number;
@@ -15,9 +17,12 @@ interface BoardProps {
         next: boolean;
         pageList: number[];
     };
+    currentPage: number; // 추가: 현재 페이지 상태
+    onPageClick: (pageNum: number) => void;
+    uno:number
 }
 
-const Board: React.FC<BoardProps> = ({boardData}) => {
+const Board: React.FC<BoardProps> = ({boardData, currentPage, onPageClick, uno}) => {
     return(
         <div className='boardMain'>
             <div className='boardHeader'>
@@ -30,17 +35,25 @@ const Board: React.FC<BoardProps> = ({boardData}) => {
             {boardData.dtoList.map((item) => (
                     <div key={item.bno} className='boardRow'>
                         <p>{item.bno}</p>
-                        <p>{item.btitle}</p>
+                        <Link to={`/read/${item.bno}`} className='aTitle'>
+                            <p>{item.btitle} [{item.replyCount}]</p>  
+                        </Link>
                         <p>{item.bnickname}</p>
                         <p>{item.regDate}</p>
                     </div>
                 ))}
             </div>
             <div className="pagination">
-                {boardData.pageList.map((pageNum) => (
-                    <button key={pageNum}>{pageNum}</button>
-                ))}
-            </div>
+    {boardData.pageList.map((pageNum) => (
+        <button
+            key={pageNum}
+            className={pageNum === currentPage ? 'active' : ''}
+            onClick={() => onPageClick(pageNum)}
+        >
+            {pageNum}
+        </button>
+    ))}
+</div>
         </div>
     );
 }
