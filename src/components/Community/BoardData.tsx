@@ -35,7 +35,7 @@ const Board: React.FC<BoardProps> = ({boardData, currentPage, onPageClick, uno})
             {boardData.dtoList.map((item) => (
                     <div key={item.bno} className='boardRow'>
                         <p>{item.bno}</p>
-                        <Link to={`/read/${item.bno}`} className='aTitle'>
+                        <Link to={`/read/${item.bno}`} state={{uno}} className='aTitle'>
                             <p>{item.btitle} [{item.replyCount}]</p>  
                         </Link>
                         <p>{item.bnickname}</p>
