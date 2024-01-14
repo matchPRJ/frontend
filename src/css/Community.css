@@ -220,21 +220,25 @@
 .font1 {
     color: rgb(33, 33, 230);
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .font2 {
     color: red;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .replyFont1 {
     color: rgb(33, 33, 230);
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .replyFont2 {
     color: red;
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .readTitle {
