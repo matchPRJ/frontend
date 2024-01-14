@@ -6,6 +6,8 @@ import LoginPage from "./pages/LoginPage";
 import Community from './pages/Community';
 import Register from './pages/Register';
 import Read from './pages/Read';
+import AccidentPage from './pages/AccidentPage';
+
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         <Route path="/community" element={<Community/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/read/:bno" element={<Read/>} />
+        <Route path="/accident" element={<AccidentPage/>} />
+
       </Routes>
     </BrowserRouter>
   );
