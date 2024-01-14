@@ -8,7 +8,9 @@ const Header = () => {
             <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
 
                 <div className = "flexlogo">
-                    <h1>사고차차</h1>
+                    <a href='/' className='touch'>
+                        <h1>사고차차</h1>
+                    </a>
                 </div>
 
                 <Button variant="contained" size="large" href="/login">
