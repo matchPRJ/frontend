@@ -6,7 +6,7 @@ const NavBar = () => {
             <a href='/search' className='touch'>
                 <span className="barSpan">판매 비교</span>
             </a>
-            <a href='/' className='touch'>
+            <a href='/accident' className='touch'>
                 <span className="barSpan">사고 비율</span>
             </a>
             <a href='/' className='touch'>
