@@ -333,3 +333,23 @@
     background-color: gainsboro;
     cursor: pointer;
 }
+
+/* modifyPage css 부분*/
+
+.modifyTitle {
+    width: 800px;
+    height: 25px;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.modifyContent {
+    width: 780px;
+    height: 200px;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;  
+    resize: none;  
+    overflow: auto;
+}
