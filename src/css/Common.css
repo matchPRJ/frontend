@@ -13,6 +13,11 @@
     font-size: 30px;
 }
 
+.flexlogo {
+    font-size: 30px;
+    flex: 1;
+}
+
 .login {
     flex-direction: row;
     margin-top: 50px;
