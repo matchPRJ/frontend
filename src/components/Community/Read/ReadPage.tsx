@@ -1,6 +1,7 @@
 import '../../../css/Community.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface ReadPageProps {
     bno: any;
@@ -33,7 +34,9 @@ const ReadPage: React.FC<ReadPageProps> = ({ bno, buno, btitle, bcontent, bnickn
         <div className="readPage">
             {canEdit && (
                 <div className="readButtons">
-                    <text className='font1'>수정</text>
+                    <Link to={`/modify/${bno}`} state={{bno}} className='aTitle'>
+                        <text className='font1'>수정</text>
+                    </Link>
                     <text>|</text>
                     <text className='font2' onClick={Remove}>삭제</text>
                 </div>
