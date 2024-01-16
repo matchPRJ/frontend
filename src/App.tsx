@@ -7,7 +7,7 @@ import Community from './pages/Community';
 import Register from './pages/Register';
 import Read from './pages/Read';
 import AccidentPage from './pages/AccidentPage';
-
+import MapPage from './pages/MapPage';
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Route path="/register" element={<Register/>} />
         <Route path="/read/:bno" element={<Read/>} />
         <Route path="/accident" element={<AccidentPage/>} />
-
+        <Route path="/map" element={<MapPage/>} />
       </Routes>
     </BrowserRouter>
   );
