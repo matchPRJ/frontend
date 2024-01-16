@@ -8,6 +8,7 @@ import Register from './pages/Register';
 import Read from './pages/Read';
 import AccidentPage from './pages/AccidentPage';
 import Modify from './pages/Modify';
+import ReplyModify from './pages/ReplyModify';
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/read/:bno" element={<Read/>} />
         <Route path="/accident" element={<AccidentPage/>} />
         <Route path="/modify/:bno" element={<Modify/>} />
+        <Route path="/replyModify" element={<ReplyModify/>} />
       </Routes>
     </BrowserRouter>
   );

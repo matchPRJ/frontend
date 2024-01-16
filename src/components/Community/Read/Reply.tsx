@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../../../css/Community.css';
 import axios from 'axios';
 
@@ -8,11 +9,13 @@ interface replyProps {
 }
 
 const Reply: React.FC<replyProps> = ({rbno, uno}) => {
+    
 
     const [rcontent, setReply] = useState("");
 
     const [replies, setReplies] = useState<{ 
         rno: number; 
+        rbno: number;
         runo: number;
         rnickname: string; 
         regDate: string; 
@@ -38,7 +41,7 @@ const Reply: React.FC<replyProps> = ({rbno, uno}) => {
         const fetchReplies = async () => {
             try {
                 const response = await axios.get(`http://localhost:6400/reply/board/${rbno}`);
-                setReplies(response.data as { rno: number; runo: number, rnickname: string; regDate: string; rcontent: string }[]);
+                setReplies(response.data as { rno: number; rbno: number; runo: number, rnickname: string; regDate: string; rcontent: string }[]);
             } catch (error) {
                 console.error('댓글 데이터를 불러오는 도중 에러 발생:', error);
             }
@@ -80,7 +83,9 @@ const Reply: React.FC<replyProps> = ({rbno, uno}) => {
                             <text>[{reply.rnickname}] | [{reply.regDate}]</text>
                             {reply.runo === uno && (
                                 <div>
-                                    <text className='replyFont1'>수정</text>
+                                    <Link to={`/replyModify`} state={{reply}} className='aTitle'>
+                                        <text className='replyFont1'>수정</text>
+                                    </Link>
                                     <text>|</text>
                                     <text className='replyFont2' onClick={() => Remove(reply.rno)}>삭제</text>
                                 </div>
