@@ -296,7 +296,7 @@
 }
 
 .replyComment {
-    margin-top: 20px;
+    margin: 20px auto;
     height: auto;
     width: 700px;
 }
@@ -352,4 +352,30 @@
     border: none;  
     resize: none;  
     overflow: auto;
+}
+
+/* modifyReply css 부분*/
+
+.replyModify {
+    margin: 20px auto;
+    height: auto;
+    width: 700px;
+    text-align: center;
+}
+
+.modifyTextArea {
+    width: 680px;
+    height: 200px;
+    margin-top: 5px;
+    font-size: 18px;
+    resize: none; 
+}
+
+.modifyButton {
+    background-color: skyblue;
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
 }
