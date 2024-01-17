@@ -1,5 +1,6 @@
 import NavBar from "../components/common/NavBar";
-import SiteLogo from "../components/common/SiteLogo";
+import { Container } from "@mui/material";
+import Header from "../components/common/Header";
 import Board from "../components/Community/BoardData";
 import Search from "../components/Community/Search";
 import axios from 'axios';
@@ -46,7 +47,9 @@ const Community = () => {
 
     return (
         <div>
-            <SiteLogo />
+            <Container maxWidth="lg">
+                <Header/>
+            </Container>
             <NavBar />
             <Search onSearch={fetchData} uno={uno}/>
             <Board boardData={boardData} currentPage={currentPage} onPageClick={PageClick} uno={uno} />

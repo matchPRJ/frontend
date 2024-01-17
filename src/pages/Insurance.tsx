@@ -1,19 +1,18 @@
-import { Container } from "@mui/material";
 import NavBar from "../components/common/NavBar";
-import MainView from "../components/Main/MainView";
+import { Container } from "@mui/material";
 import Header from "../components/common/Header";
+import SelectView from "../components/Insurance/SelectView";
 
-const MainPage = () => {
+const Insurance = () => {
     return(
         <div>
             <Container maxWidth="lg">
                 <Header/>
             </Container>
-            <NavBar/>
-            <MainView/>
+            <NavBar />
+            <SelectView/>
         </div>
-        
     );
 }
 
-export default MainPage;
+export default Insurance;

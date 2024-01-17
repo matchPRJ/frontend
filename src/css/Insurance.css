@@ -1,0 +1,51 @@
+.InsuranceMain {
+    margin: 50px 200px 50px;
+    height: auto;
+    text-align: center;
+}
+
+.checkbox {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 50px 10px;
+    height: auto;
+    border: none;
+}
+
+.Itable {
+    align-items: center;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 5px;
+    width: 250px;
+    height: 250px;
+}
+
+.Ibutton {
+    margin-top: 20px;
+    font-size: 22px;
+    width: 150px;
+    background-color: rgb(145, 212, 238);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tt {
+    font-size: 18px;
+}
+
+/* selectbox에 적용하는 css */
+
+.InsuranceBox {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height:40px;
+    width: 230px;
+    font-size: 18px;
+    border-width: 2px;
+    border-radius: 5px;
+}

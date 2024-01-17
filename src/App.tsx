@@ -9,7 +9,6 @@ import Read from './pages/Read';
 import AccidentPage from './pages/AccidentPage';
 import Modify from './pages/Modify';
 import ReplyModify from './pages/ReplyModify';
-import MapPage from './pages/MapPage';
 
 
 
@@ -26,7 +25,6 @@ function App() {
         <Route path="/accident" element={<AccidentPage/>} />
         <Route path="/modify/:bno" element={<Modify/>} />
         <Route path="/replyModify" element={<ReplyModify/>} />
-        <Route path="/map" element={<MapPage/>} />
       </Routes>
     </BrowserRouter>
   );

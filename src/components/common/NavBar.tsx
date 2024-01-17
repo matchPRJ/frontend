@@ -9,10 +9,10 @@ const NavBar = () => {
             <a href='/accident' className='touch'>
                 <span className="barSpan">사고 비율</span>
             </a>
-            <a href='/' className='touch'>
+            <a href='/insurance' className='touch'>
                 <span className="barSpan">보험 추천</span>
             </a>
-            <a href='/' className='touch'>
+            <a href='/map' className='touch'>
                 <span className="barSpan">시설 위치</span>
             </a>
             <a href='/community' className='touch'>

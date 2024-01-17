@@ -60,7 +60,7 @@ const MainView = () => {
                         사용자에게 다양한 보험사의 추천 결과를 제시합니다. 
                         최종적으로 사용자가 선택한 옵션에 따라 가장 많이 언급된 보험사를 추천하여 보험 가입 결정을 돕습니다.
                     </span>
-                    <a href="/" className='touch'>
+                    <a href="/insurance" className='touch'>
                         <button className='Button'>자세히 살펴보기</button>
                     </a>
                 </div>

@@ -37,7 +37,7 @@ export default function LoginPage() {
       password: data.get('password'),
     });
 
-    axios.post("http://localhost:8080/user/login", {
+    axios.post("http://localhost:6400/user/login", {
       id: data.get('id'),
       password: data.get('password')
     })
