@@ -40,7 +40,7 @@ const MainView = () => {
                         2️⃣ 정확한 비율 측정<br/>
                         입력된 사고 환경 조건을 기반으로 서비스는 해당 조건에서의 차량 사고 발생 가능성을 정확하게 측정합니다. 
                         통계적인 분석과 머신러닝 알고리즘을 활용하여 사고의 원인 및 잘못된 비율을 예측하고 제시합니다.</span>
-                    <a href="/" className='touch'>
+                    <a href="/accident" className='touch'>
                         <button className='Button'>자세히 살펴보기</button>
                     </a>
                 </div>
@@ -80,7 +80,7 @@ const MainView = () => {
                         주유소의 경우는 가격 정보를, 병원이나 카센터의 경우는 서비스 평점을 확인할 수 있습니다. 
                         이를 통해 사용자는 비교적 저렴한 가격이나 좋은 서비스를 제공하는 시설을 선택할 수 있습니다. 
                     </span>
-                    <a href="/" className='touch'>
+                    <a href="/map" className='touch'>
                         <button className='Button'>자세히 살펴보기</button>
                     </a>
                 </div>
