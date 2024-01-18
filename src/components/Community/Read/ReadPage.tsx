@@ -47,7 +47,14 @@ const ReadPage: React.FC<ReadPageProps> = ({ bno, buno, btitle, bcontent, bnickn
                 <text>[{modDate}]</text>
             </div>
             <div className='readArea'>
-                {link && <img src={link} alt="게시물 이미지" />}
+                {link && link.includes('.mp4') ? (
+                    <video width="320" height="240" controls>
+                        <source src={link} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                ) : (
+                    <img src={link} alt="게시물 이미지" />
+                )}
                 <text>{bcontent}</text>
             </div>
         </div>
