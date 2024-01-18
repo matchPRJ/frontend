@@ -19,10 +19,9 @@ interface BoardProps {
     };
     currentPage: number; // 추가: 현재 페이지 상태
     onPageClick: (pageNum: number) => void;
-    uno:number
 }
 
-const Board: React.FC<BoardProps> = ({boardData, currentPage, onPageClick, uno}) => {
+const Board: React.FC<BoardProps> = ({boardData, currentPage, onPageClick}) => {
     return(
         <div className='boardMain'>
             <div className='boardHeader'>
@@ -35,7 +34,7 @@ const Board: React.FC<BoardProps> = ({boardData, currentPage, onPageClick, uno})
             {boardData.dtoList.map((item) => (
                     <div key={item.bno} className='boardRow'>
                         <p>{item.bno}</p>
-                        <Link to={`/read/${item.bno}`} state={{uno}} className='aTitle'>
+                        <Link to={`/read/${item.bno}`} className='aTitle'>
                             <p>{item.btitle} [{item.replyCount}]</p>  
                         </Link>
                         <p>{item.bnickname}</p>

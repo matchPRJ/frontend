@@ -3,11 +3,14 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-interface WriteProps {
-    uno: number;
-}
 
-const Write: React.FC<WriteProps> = ({ uno }) => {
+
+const Write = () => {
+
+    const userString = sessionStorage.getItem('user');
+    const user = userString ? JSON.parse(userString) : null;
+    const uno: number | null = user ? user.uno : null;
+
     const [image, setImage] = useState<File | null>(null)
     const [showImages, setShowImages] = useState<string[]>([])
     const [title, setTitle] = useState<string>('');

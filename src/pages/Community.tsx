@@ -17,9 +17,6 @@ const Community = () => {
         pageList: [],
     });
 
-    // 테스트용 회원번호
-    const uno:number = 1;
-
     const [currentPage, setCurrentPage] = useState(1);
 
     const fetchData = async (searchValue: string) => {
@@ -51,8 +48,8 @@ const Community = () => {
                 <Header/>
             </Container>
             <NavBar />
-            <Search onSearch={fetchData} uno={uno}/>
-            <Board boardData={boardData} currentPage={currentPage} onPageClick={PageClick} uno={uno} />
+            <Search onSearch={fetchData}/>
+            <Board boardData={boardData} currentPage={currentPage} onPageClick={PageClick}/>
         </div>
     );
 }

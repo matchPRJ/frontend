@@ -1,16 +1,14 @@
 // 해당 게시글 상세 보기
+import { Container } from "@mui/material";
+import Header from "../components/common/Header";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import NavBar from "../components/common/NavBar";
-import SiteLogo from "../components/common/SiteLogo";
 import ReadPage from '../components/Community/Read/ReadPage';
 import Reply from '../components/Community/Read/Reply';
-import { useLocation } from 'react-router-dom';
 
 const Read = () => {
-    const location = useLocation();
-    const uno = location?.state?.uno;
     const { bno } = useParams();
     const [postData, setPostData] = useState({
         buno: 0,
@@ -38,7 +36,9 @@ const Read = () => {
 
     return(
         <div>
-            <SiteLogo />
+            <Container maxWidth="lg">
+                <Header/>
+            </Container>
             <NavBar />
             <ReadPage 
                 bno ={bno}
@@ -48,9 +48,8 @@ const Read = () => {
                 bnickname={postData.bnickname} 
                 modDate={postData.modDate} 
                 link={postData.link} 
-                uno={uno} 
             />
-            <Reply rbno={bno} uno={uno}/>
+            <Reply rbno={bno}/>
         </div>
     );
 }
