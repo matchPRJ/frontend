@@ -72,7 +72,7 @@ export const TextAccordion: React.FC<TextAccordionProps> = ({ title, onInputChan
       <p className='menuText' onClick={toggleAccordion}>{title}</p>
       {isOpen && (
         <input
-          className='inputText'
+          className='inputCarText'
           type="text"
           value={textValue}
           onChange={(e) => {
