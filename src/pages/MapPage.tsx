@@ -7,6 +7,7 @@ import gasimg from '../img/gas.png';
 import carcenterimg from '../img/carservice.png';
 import hospitalimg from '../img/hospital.png';
 import SiteLogo from '../components/common/SiteLogo';
+import Header from '../components/common/Header';
 import NavBar from '../components/common/NavBar';
 import { Box, Button, Container, Grid } from '@mui/material';
 
@@ -53,7 +54,9 @@ const MapPage=()=> {
 
   return isLoaded ? (
     <>
-    <SiteLogo/>
+    <Container maxWidth="lg">
+        <Header/>
+    </Container>
         <NavBar/>
         <Container maxWidth = "md" style={{ height: '50vh' }}>
             <Container maxWidth = "xs" sx={{mt:2, mb:2}}>
