@@ -16,11 +16,13 @@ const containerStyle = {
     height: '100%'
 };
 
+// 지도 중심 위치 (서울)
 const center = {
   lat: 37.5649867,
   lng: 126.985575
 };
 
+//지도 줌 옵션
 const OPTIONS = {
   minZoom: 4,
   maxZoom: 18,

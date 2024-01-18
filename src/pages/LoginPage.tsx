@@ -26,14 +26,14 @@ function Copyright(props: any) {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
-
 export default function LoginPage() {
 
+  //로그인 성공 여부 확인
   const [loginFailed, setLoginFailed] = React.useState(false);
+  //화면 이동
   const navigate = useNavigate();
 
+  // 로그인 시 서버와 통신
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -48,15 +48,19 @@ export default function LoginPage() {
     })
     .then((Response) => {
       console.log(Response.data)
+      //사용자 정보가 확인된 경우
       if(Response.data.id != null){
         console.log("로그인 성공")
         setLoginFailed(false);
+        // 세션 스토리지에 사용자 정보 저장
         sessionStorage.setItem('user', JSON.stringify(Response.data));
         const userString = sessionStorage.getItem('user');
         const user = userString ? JSON.parse(userString) : null;
         console.log(user);
+        // 화면 이동
         navigate('/');
       }else{
+        //사용자 정보가 확인되지 않은 경우
         console.log("로그인 실패");
         setLoginFailed(true);
       }
