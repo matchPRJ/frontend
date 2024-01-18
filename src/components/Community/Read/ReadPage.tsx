@@ -11,10 +11,13 @@ interface ReadPageProps {
     bnickname: string;
     modDate: string;
     link?: string;
-    uno: number;
 }
 
-const ReadPage: React.FC<ReadPageProps> = ({ bno, buno, btitle, bcontent, bnickname, modDate, link, uno}) => {
+const ReadPage: React.FC<ReadPageProps> = ({ bno, buno, btitle, bcontent, bnickname, modDate, link}) => {
+    const userString = sessionStorage.getItem('user');
+    const user = userString ? JSON.parse(userString) : null;
+    const uno: number | null = user ? user.uno : null;
+
     const canEdit = buno === uno;
     const navigate = useNavigate();
 
@@ -47,14 +50,14 @@ const ReadPage: React.FC<ReadPageProps> = ({ bno, buno, btitle, bcontent, bnickn
                 <text>[{modDate}]</text>
             </div>
             <div className='readArea'>
-                {link && link.includes('.mp4') ? (
-                    <video width="320" height="240" controls>
-                        <source src={link} type="video/mp4" />
+            {link && (link.includes('.mp4') ? (
+                <video width="320" height="240" controls>
+                    <source src={link} type="video/mp4" />
                         Your browser does not support the video tag.
-                    </video>
-                ) : (
-                    <img src={link} alt="게시물 이미지" />
-                )}
+                </video>
+                ) : link ? (
+                <img src={link} alt="게시물 이미지" />
+            ) : null)}
                 <text>{bcontent}</text>
             </div>
         </div>

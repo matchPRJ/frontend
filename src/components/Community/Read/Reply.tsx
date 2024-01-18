@@ -5,10 +5,13 @@ import axios from 'axios';
 
 interface replyProps {
     rbno:any;
-    uno: number;
 }
 
-const Reply: React.FC<replyProps> = ({rbno, uno}) => {
+const Reply: React.FC<replyProps> = ({rbno}) => {
+
+    const userString = sessionStorage.getItem('user');
+    const user = userString ? JSON.parse(userString) : null;
+    const uno: number | null = user ? user.uno : null;
     
 
     const [rcontent, setReply] = useState("");

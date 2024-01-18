@@ -1,17 +1,16 @@
 import Write from "../components/Community/Register/Write";
 import NavBar from "../components/common/NavBar";
-import SiteLogo from "../components/common/SiteLogo";
-import { useLocation } from 'react-router-dom';
-
+import { Container } from "@mui/material";
+import Header from "../components/common/Header";
 
 const Register = () => {
-    const location = useLocation();
-    const uno = location?.state?.uno;
     return(
         <div>
-            <SiteLogo />
+            <Container maxWidth="lg">
+                <Header/>
+            </Container>
             <NavBar />
-            <Write uno={uno}/>
+            <Write/>
         </div>
     );
 }

@@ -1,8 +1,9 @@
 import axios from "axios";
+import { Container } from "@mui/material";
+import Header from "../components/common/Header";
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import NavBar from "../components/common/NavBar";
-import SiteLogo from "../components/common/SiteLogo";
 import ModifyRead from "../components/Community/Modify/ModifyRead";
 
 
@@ -34,7 +35,9 @@ const Modify = () => {
 
     return(
         <div>
-            <SiteLogo/>
+            <Container maxWidth="lg">
+                <Header/>
+            </Container>
             <NavBar/>
             <ModifyRead
                 bno ={bno}

@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
+import Header from "../components/common/Header";
 import NavBar from "../components/common/NavBar";
 import MainView from "../components/Main/MainView";
-import Header from "../components/common/Header";
 
 const MainPage = () => {
     return(

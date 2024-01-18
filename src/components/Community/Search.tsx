@@ -6,10 +6,9 @@ import { Link } from 'react-router-dom';
 
 interface SearchProps {
     onSearch: (searchValue: string) => void;
-    uno:number
 }
 
-const Search: React.FC<SearchProps> = ({ onSearch, uno }) => {
+const Search: React.FC<SearchProps> = ({ onSearch}) => {
     const [selectedOption, setSelectedOption] = useState<string>('');
     const [inputValue, setInputValue] = useState<string>('');
 
@@ -33,7 +32,7 @@ const Search: React.FC<SearchProps> = ({ onSearch, uno }) => {
             <input className='input' onChange={InputChange}></input>
             <button className='searchButton' onClick={Search}>검색</button>
             <div className='registerBox'>
-                <Link to={'/register'} state={{uno}} className='touch'>
+                <Link to={'/register'} className='touch'>
                     <span className='register'>글 쓰기</span>
                 </Link> 
             </div>
