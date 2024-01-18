@@ -1,8 +1,12 @@
 
-import { Button, Toolbar, Typography } from '@mui/material';
+import { Avatar, Button, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 
 const Header = () => {
+
+    const userString = sessionStorage.getItem('user');
+    const user = userString ? JSON.parse(userString) : null;
+
     return(
         <React.Fragment>
             <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -13,10 +17,13 @@ const Header = () => {
                     </a>
                 </div>
 
-                <Button variant="contained" size="large" href="/login">
-                    로그인
-                </Button>
-
+                {user ? (
+                    <Avatar src="/broken-image.jpg" />
+                ) : (
+                    <Button variant="contained" size="large" href="/login">
+                        로그인
+                    </Button>
+                )}
             </Toolbar>  
             </React.Fragment>
     );

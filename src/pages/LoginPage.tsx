@@ -136,7 +136,7 @@ export default function LoginPage() {
                         </Link>
                     </Grid>
                     <Grid item>
-                        <Link href="#" variant="body2">
+                        <Link href="/register" variant="body2">
                             아직 회원이 아니신가요?
                         </Link>
                     </Grid>
