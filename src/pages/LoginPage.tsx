@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import { createTheme } from '@mui/material/styles';
 import axios from 'axios';
 import Header from '../components/common/Header';
+import { useNavigate } from "react-router-dom";
 
 
 function Copyright(props: any) {
@@ -29,6 +30,10 @@ function Copyright(props: any) {
 const defaultTheme = createTheme();
 
 export default function LoginPage() {
+
+  const [loginFailed, setLoginFailed] = React.useState(false);
+  const navigate = useNavigate();
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -41,7 +46,21 @@ export default function LoginPage() {
       id: data.get('id'),
       password: data.get('password')
     })
-    .then((Response) => {console.log(Response.data)}) 
+    .then((Response) => {
+      console.log(Response.data)
+      if(Response.data.id != null){
+        console.log("로그인 성공")
+        setLoginFailed(false);
+        sessionStorage.setItem('user', JSON.stringify(Response.data));
+        const userString = sessionStorage.getItem('user');
+        const user = userString ? JSON.parse(userString) : null;
+        console.log(user);
+        navigate('/');
+      }else{
+        console.log("로그인 실패");
+        setLoginFailed(true);
+      }
+    }) 
     .catch((Error) => {console.log(Error)})
   };
 
@@ -71,6 +90,8 @@ export default function LoginPage() {
 
                     {/* 아이디 텍스트 필드 */}
                     <TextField
+                    error={loginFailed}
+                    helperText={loginFailed ? "아이디를 확인하세요" : ""}
                     margin="normal"
                     fullWidth
                     id="id"
@@ -80,6 +101,8 @@ export default function LoginPage() {
 
                     {/* 비밀번호 텍스트 필드 */}
                     <TextField
+                    error={loginFailed}
+                    helperText={loginFailed ? "비밀번호를 확인하세요" : ""}
                     margin="normal"
                     fullWidth
                     name="password"
